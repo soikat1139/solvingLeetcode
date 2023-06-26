@@ -19,3 +19,7 @@ class Solution:
            reverseTree(root.left)
         reverseTree(root)
         return root
+
+#To solve this problem you will need to understand recurrsion properly.
+#Here Is how you solve reccursion
+

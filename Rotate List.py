@@ -57,3 +57,67 @@ cur=newHead
 while cur!=None:
     print(cur.val)
     cur=cur.next
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def rotateRight(self, head, k) :
+        def getLength(head):
+            currentNode=head
+            length=0
+            while currentNode != None:
+                length+=1
+                currentNode=currentNode.next
+            return length
+
+        length=getLength(head)
+
+        def getTail(head):  
+            currNode=head
+            while currNode.next != None:
+                currNode=currNode.next
+            return currNode
+
+
+        toTreverse=length-2
+        treversedPosition=1
+        newTail=head
+        while treversedPosition < toTreverse:
+            treversedPosition+=1
+            newTail=newTail.next
+
+
+        def getTail(head):
+
+            currNode=head
+            while currNode.next != None:
+                currNode=currNode.next
+            return currNode
+        tail=getTail(head)
+
+        tail.next=head
+        newHead=newTail.next
+        newTail.next=None
+
+        cur=newHead
+        while cur!=None:
+            print(cur.val)
+            cur=cur.next
+
+        
+      
+        
+        
+        
+
+        
+solved=Solution()
+solved.rotateRight(head,2)
+
+
+
+

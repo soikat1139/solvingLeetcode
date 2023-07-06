@@ -1,3 +1,8 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 head=ListNode(1)
 node2=ListNode(2)
 node3=ListNode(3)

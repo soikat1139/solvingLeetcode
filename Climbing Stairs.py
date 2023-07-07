@@ -35,3 +35,32 @@ class Solution:
             return recurssion(x+1) + recurssion(x+2)
         return recurssion(0)
 
+
+#Solution with Cache hashMap:
+
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+
+        hashMap={}
+
+        def recurssion(x):
+            
+            if x==n:
+                return 1
+            if x>n:
+                return 0
+            
+            if n in hashMap:
+                return hashMap[n]
+
+            hashMap[n]=recurssion(x+1) + recurssion(x+2)
+            
+            return hashMap[n]
+
+
+        return recurssion(0)
+
+
+            
+
